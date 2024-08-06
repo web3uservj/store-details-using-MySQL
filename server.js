@@ -5,11 +5,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
-// Create connection to MySQL database
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root', // use your MySQL username
-  password: 'Adhi@2002', // use your MySQL password
+  password: '........', // use your MySQL password
   database: 'event_manager'
 });
 
@@ -22,7 +21,6 @@ db.connect(err => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// HTML form for input
 app.get('/', (req, res) => {
   res.send(`
     <form action="/events" method="post">
@@ -37,7 +35,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-// Create event
+
 app.post('/events', (req, res) => {
   const { name, date, description } = req.body;
   const sql = 'INSERT INTO events (name, date, description) VALUES (?, ?, ?)';
@@ -47,7 +45,7 @@ app.post('/events', (req, res) => {
   });
 });
 
-// Read all events
+
 app.get('/events', (req, res) => {
   const sql = 'SELECT * FROM events';
   db.query(sql, (err, results) => {
@@ -56,7 +54,7 @@ app.get('/events', (req, res) => {
   });
 });
 
-// Update event
+
 app.put('/events/:id', (req, res) => {
   const { id } = req.params;
   const { name, date, description } = req.body;
@@ -67,7 +65,7 @@ app.put('/events/:id', (req, res) => {
   });
 });
 
-// Delete event
+
 app.delete('/events/:id', (req, res) => {
   const { id } = req.params;
   const sql = 'DELETE FROM events WHERE id = ?';
