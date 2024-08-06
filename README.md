@@ -33,11 +33,11 @@ This is a basic event management application using Node.js, Express, and MySQL. 
    
    ```bash
     CREATE TABLE events (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  date DATE NOT NULL,
-  description TEXT
-);
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    description TEXT
+     );
 
 4. **Start the server:**
    
