@@ -21,9 +21,37 @@ This is a basic event management application using Node.js, Express, and MySQL. 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/event-manager.git
+    https://github.com/web3uservj/store-details-using-MySQL.git
    cd event-manager
 
-   2. **Install dependencies:**
+2. **Install dependencies:**
+   
+   ```bash
+    npm install express mysql2 body-parser
+   
+3. **Configure database:**
+   
+   ```bash
+    CREATE TABLE events (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  date DATE NOT NULL,
+  description TEXT
+);
+
+4. **Start the server:**
+   
+    ```bash
+    node server.js
+
+5. **Run local host:**
+
+   ```bash
+   The server will run on http://localhost:3000.
+
+   
+
+   
+ 
 
    
