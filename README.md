@@ -1,5 +1,5 @@
 # Event Manager
-![Application Screenshot](picture1.png)
+![Application Screenshot](Picture1.png)
 
 This is a basic event management application using Node.js, Express, and MySQL. It allows you to create, read, update, and delete events.
 
